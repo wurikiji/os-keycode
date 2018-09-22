@@ -51,7 +51,7 @@ const keys = {
   i: { linux: 23, macOS: 34, windows: 73 },
   o: { linux: 24, macOS: 31, windows: 79 },
   p: { linux: 25, macOS: 35, windows: 80 },
-  a: { linux: 30, macOS: '*', windows: 65 },
+  a: { linux: 30, macOS: 0, windows: 65 },
   s: { linux: 31, macOS: 1, windows: 83 },
   d: { linux: 32, macOS: 2, windows: 68 },
   f: { linux: 33, macOS: 3, windows: 70 },
