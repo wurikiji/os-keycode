@@ -7,6 +7,11 @@ It supports Linux, madOS and Windows keycodes.
 The lib is intended to be used in Node.js environments. 
 If you need something for the browser, you may take a look at [keycode](https://www.npmjs.com/package/keycode).
 
+## Install wurikiji version
+
+```
+npm i git+https://github.com:wurikiji/os-keycode.git
+```
 ## Keycode Table
 
 The keycodes used are from [here](http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php).

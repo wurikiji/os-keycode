@@ -3,14 +3,14 @@ const keys = {
   down: { linux: 108, macOS: 125, windows: 28 },
   left: { linux: 105, macOS: 123, windows: 25 },
   right: { linux: 106, macOS: 124, windows: 27 },
-  backspace: { linux: 14, macOS: 117, windows: 8 },
+  backspace: { linux: 14, macOS: 51, windows: 8 },
   enter: { linux: 28, macOS: 76, windows: '*' },
   home: { linux: 102, macOS: 115, windows: 36 },
   end: { linux: 107, macOS: 119, windows: 35 },
   pageDown: { linux: 109, macOS: 121, windows: 34 },
   pageUp: { linux: 104, macOS: 116, windows: 33 },
   return: { linux: '*', macOS: 36, windows: 13 },
-  delete: { linux: 111, macOS: 51, windows: 46 },
+  delete: { linux: 111, macOS: 117, windows: 46 },
   tab: { linux: 15, macOS: 48, windows: 9 },
   spacebar: { linux: 57, macOS: 49, windows: 20 },
   shift: { linux: '*', macOS: 56, windows: 10 },
@@ -80,6 +80,14 @@ const keys = {
   period: { linux: 52, macOS: 47, windows: 190 },
   comma: { linux: 51, macOS: 43, windows: 188 },
   slash: { linux: 53, macOS: 44, windows: 191 },
+  backslash: {linux: '*', macOS: 42, windows: '*'},
+  rightsqure: {linux: '*', macOS: 30, windows: '*'},
+  leftsqure: {linux: '*', macOS: 33, windows: '*'},
+  accent: {linux: '*', macOS: 50, windows: '*'},
+  minus: {linux: '*', macOS: 27, windows: '*'},
+  equals: {linux: '*', macOS: 24, windows: '*'},
+  semiconlon: {linux: '*', macOS: 41, windows: '*'},
+  "'": {linux: '*', macOS: 39, windows: '*'},
   num0: { linux: 82, macOS: 82, windows: 96 },
   num1: { linux: 79, macOS: 83, windows: 97 },
   num2: { linux: 80, macOS: 84, windows: 98 },
@@ -144,8 +152,8 @@ const keycode = keyname => {
 
   const platformKey = key[platform];
 
-  return platformKey === '*' ? 0 : platformKey;
+  return platformKey;
 };
 
-module.exports.keyname = keycode => keycode === 0 ? platformKeys['*'] : platformKeys[keycode];
+module.exports.keyname = keycode => platformKeys[keycode];
 module.exports.keycode = keycode;
